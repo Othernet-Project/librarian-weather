@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Librarian Weather</title>
+        <link rel="stylesheet" href="css/main.css"></link>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Weather</h1>
+            <p>
+            <select id="cities-list">
+                <option>Loading...</option>
+            </select>
+
+            <button id="celsius" class="units celsius" disabled>&deg;C</button>
+            <button id="fahrenheit" class="units fahrenheit">&deg;F</button>
+            </p>
+        </div>
+
+        <div id="clock" class="clock">
+
+        </div>
+
+        <div class="main celsius" id="main">
+            <div id="today" class="report">Select a city using select box at the top.</div>
+            <div class="forecast-wrapper">
+                <h2>Next 6 days</h2>
+                <div id="forecast" class="forecast"></div>
+            </div>
+        </div>
+
+        <div class="attribution">
+            <p>
+            Weather data from OpenWeatherMap&trade;
+            </p>
+            <p>
+            Licensed under Creative Commons Attribution-ShareAlike license
+            </p>
+            <p>
+            <a href="/en/files/weather/weather.json">Download dataset</a>
+            </p>
+        </div>
+
+        <!-- templates -->
+
+        <script id="option" type="text/template">
+            <option value="<%= city %>"><%= city %></option>
+        </script>
+
+        <script id="empty" type="text/template">
+            <option>Select a city</option>
+        </script>
+
+        <script id="error" type="text/template">
+            <option>ERROR</option>
+        </script>
+
+        <script id="report" type="text/template">
+            <h2 class="day">today</h2>
+            <p class="icon"><img src="<%= report.iconPath() %>"></p>
+            <p class="temp">
+            <span class="c max">
+                <%= report.tempC('max') %>&deg;C
+            </span><span class="f max">
+                <%= report.tempF('max') %>&deg;F
+            </span><span class="c min">
+                <%= report.tempC('min') %>&deg;C
+            </span><span class="f min">
+                <%= report.tempF('min') %>&deg;F
+            </span>
+            </p>
+            <p class="weather"><%= report.description %></p>
+            <p class="humidity"><span class="val"><%= Math.round(report.humidity) %><span class="unit">%</span></span> <span class="label">humidity</span></p>
+            <p class="pressure"><span class="val"><%= Math.round(report.pressure) %><span class="unit">hPa</span></span> <span class="label">pressure</span></p>
+            <table class="temps">
+                <tr>
+                    <td>
+                        <span class="c"><%= report.tempC('morn') %>&deg;C</span>
+                        <span class="f"><%= report.tempF('morn') %>&deg;F</span>
+                    </td>
+                    <td>
+                        <span class="c"><%= report.tempC('day') %>&deg;C</span>
+                        <span class="f"><%= report.tempF('day') %>&deg;F</span>
+                    </td>
+                    <td>
+                        <span class="c"><%= report.tempC('eve') %>&deg;C</span>
+                        <span class="f"><%= report.tempF('eve') %>&deg;F</span>
+                    </td>
+                    <td>
+                        <span class="c"><%= report.tempC('night') %>&deg;C</span>
+                        <span class="f"><%= report.tempF('night') %>&deg;F</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>morning</th>
+                    <th>day</th>
+                    <th>evening</th>
+                    <th>night</th>
+                </tr>
+            </table>
+        </script>
+
+        <script id="forecastDay" type="text/template">
+            <p class="forecast-day">
+                <span class="day"><%= strftime('%a %d', report.timestamp) %></span></span>
+                <span class="icon">
+                    <img src="<%= report.iconPath() %>"></span>
+                </span>
+                <span class="weather">
+                    <%= report.description %></span>
+                </span>
+                <span class="max">
+                    <span class="c max"><%= report.tempC('max') %>&deg;C</span>
+                    <span class="f max"><%= report.tempF('max') %>&deg;F</span>
+                </span>
+                <span class="min">
+                    <span class="c min"><%= report.tempC('min') %>&deg;C</span>
+                    <span class="f min"><%= report.tempF('min') %>&deg;F</span>
+                </span>
+            </p>
+        </script>
+
+        <script id="noForecasts" type="text/template">
+            <p>
+                No forecast data found
+            <p>
+        </script>
+
+        <!-- scripts -->
+
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/librarian.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

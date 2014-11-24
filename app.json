@@ -1,0 +1,10 @@
+{
+  "id": "librarian_weather",
+  "title": "Weather",
+  "version": "0.1",
+  "author": "Outernet Inc",
+  "description": {
+    "en": "Weather forecast for major cities"
+  },
+  "icon_behavior": true
+}

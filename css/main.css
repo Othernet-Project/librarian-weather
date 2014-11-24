@@ -1,0 +1,271 @@
+/* line 5, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../scss/main.scss */
+body {
+  font-size: 18px;
+  font-family: "Librartion Sans", Arial, Helvetica, sans-serif;
+  line-height: 140%;
+  background: #313b4b;
+  color: #8ea8b6;
+}
+
+/* line 17, ../scss/main.scss */
+.header {
+  padding: 1em;
+  background: #576986;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+/* line 27, ../scss/main.scss */
+.header h1 {
+  display: inline;
+  font-size: 150%;
+  text-transform: uppercase;
+}
+/* line 33, ../scss/main.scss */
+.header p {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+/* line 40, ../scss/main.scss */
+.clock {
+  font-style: italic;
+  font-size: 170%;
+  color: #608295;
+  position: absolute;
+  top: 80px;
+  right: 1em;
+  text-transform: uppercase;
+}
+
+/* line 50, ../scss/main.scss */
+.main {
+  padding: 120px 1em 1em;
+}
+
+/* line 55, ../scss/main.scss */
+.celsius .f {
+  display: none;
+}
+
+/* line 61, ../scss/main.scss */
+.fahrenheit .c {
+  display: none;
+}
+
+/* line 66, ../scss/main.scss */
+.report {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  font-style: italic;
+}
+/* line 72, ../scss/main.scss */
+.report .icon {
+  float: left;
+  margin-right: 1em;
+}
+/* line 77, ../scss/main.scss */
+.report .temp {
+  margin: 2em 0 0;
+}
+/* line 81, ../scss/main.scss */
+.report .min {
+  font-size: 90%;
+  font-weight: bold;
+  margin-right: 1em;
+}
+/* line 87, ../scss/main.scss */
+.report .max {
+  font-size: 200%;
+}
+/* line 91, ../scss/main.scss */
+.report p {
+  margin-bottom: 0.5em;
+}
+/* line 95, ../scss/main.scss */
+.report .humidity, .report .pressure {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  margin: 0 1em 1.5em 0;
+}
+/* line 101, ../scss/main.scss */
+.report .humidity .val, .report .pressure .val {
+  font-size: 120%;
+}
+/* line 105, ../scss/main.scss */
+.report .humidity .label, .report .pressure .label {
+  position: absolute;
+  top: 1.2em;
+  left: 0;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #608295;
+}
+/* line 115, ../scss/main.scss */
+.report .weather {
+  text-transform: uppercase;
+}
+/* line 119, ../scss/main.scss */
+.report .temps {
+  border-collapse: collapse;
+  line-height: 100%;
+}
+/* line 123, ../scss/main.scss */
+.report .temps tr {
+  margin: 0;
+}
+/* line 127, ../scss/main.scss */
+.report .temps td {
+  width: 120px;
+}
+/* line 131, ../scss/main.scss */
+.report .temps th {
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #608295;
+}
+
+/* line 139, ../scss/main.scss */
+.forecast-wrapper {
+  clear: both;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+/* line 145, ../scss/main.scss */
+.forecast-day {
+  display: inline-block;
+  width: 100px;
+  vertical-align: top;
+  text-align: center;
+  font-style: italic;
+}
+/* line 152, ../scss/main.scss */
+.forecast-day span {
+  display: block;
+}
+/* line 156, ../scss/main.scss */
+.forecast-day .icon img {
+  width: 80px;
+  height: 80px;
+}
+/* line 161, ../scss/main.scss */
+.forecast-day .day {
+  text-transform: uppercase;
+  color: #608295;
+  margin-bottom: 0.3em;
+}
+/* line 167, ../scss/main.scss */
+.forecast-day .weather {
+  font-size: 80%;
+}
+/* line 171, ../scss/main.scss */
+.forecast-day .max {
+  font-size: 120%;
+}
+/* line 175, ../scss/main.scss */
+.forecast-day .min {
+  color: #608295;
+}
+
+/* line 180, ../scss/main.scss */
+h2 {
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 100%;
+  padding: 0 0 0.2em;
+  border: none;
+  border-bottom: 1px solid #8ea8b6;
+  margin-bottom: 1em;
+}
+
+/* line 191, ../scss/main.scss */
+.attribution {
+  width: 600px;
+  margin: 0 auto;
+  font-size: 80%;
+  line-heigth: 100%;
+  text-align: right;
+}
+
+/* line 199, ../scss/main.scss */
+a {
+  color: #8ea8b6;
+  text-decoration: underline;
+}
+/* line 203, ../scss/main.scss */
+a:hover {
+  color: white;
+}

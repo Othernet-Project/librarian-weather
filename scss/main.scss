@@ -1,0 +1,206 @@
+@import "compass/reset";
+@import "compass/css3";
+
+$black: #313b4b;
+$light: #8ea8b6;
+$pale: #576986;
+$dark: #608295;
+
+body {
+  font-size: 18px;
+  font-family: "Librartion Sans", Arial, Helvetica, sans-serif;
+  line-height: 140%;
+  background: $black;
+  color: $light;
+}
+
+.header {
+  padding: 1em;
+  background: $pale;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  h1 {
+    display: inline;
+    font-size: 150%;
+    text-transform: uppercase;
+  }
+
+  p {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
+}
+
+.clock {
+  font-style: italic;
+  font-size: 170%;
+  color: $dark;
+  position: absolute;
+  top: 80px;
+  right: 1em;
+  text-transform: uppercase;
+}
+
+.main {
+  padding: 120px 1em 1em;
+}
+
+.celsius {
+  .f {
+    display: none;
+  }
+}
+
+.fahrenheit {
+  .c {
+    display: none;
+  }
+}
+
+.report {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  font-style: italic;
+
+  .icon {
+    float: left;
+    margin-right: 1em;
+  }
+
+  .temp {
+    margin: 2em 0 0;
+  }
+
+  .min {
+    font-size: 90%;
+    font-weight: bold;
+    margin-right: 1em;
+  }
+
+  .max {
+    font-size: 200%;
+  }
+
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  .humidity, .pressure {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    margin: 0 1em 1.5em 0;
+
+    .val {
+      font-size: 120%;
+    }
+
+    .label {
+      position: absolute;
+      top: 1.2em;
+      left: 0;
+      font-size: 80%;
+      text-transform: uppercase;
+      color: $dark;
+    }
+  }
+
+  .weather {
+    text-transform: uppercase;
+  }
+
+  .temps {
+    border-collapse: collapse;
+    line-height: 100%;
+
+    tr {
+      margin: 0;
+    }
+
+    td {
+      width: 120px;
+    }
+
+    th {
+      font-size: 80%;
+      text-transform: uppercase;
+      color: $dark;
+    }
+  }
+}
+
+.forecast-wrapper {
+  clear: both;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.forecast-day {
+  display: inline-block;
+  width: 100px;
+  vertical-align: top;
+  text-align: center;
+  font-style: italic;
+
+  span {
+    display: block;
+  }
+
+  .icon img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .day {
+    text-transform: uppercase;
+    color: $dark;
+    margin-bottom: 0.3em;
+  }
+
+  .weather {
+    font-size: 80%;
+  }
+
+  .max {
+    font-size: 120%;
+  }
+
+  .min {
+    color: $dark;
+  }
+}
+
+h2 {
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 100%;
+  padding: 0 0 0.2em;
+  border: none;
+  border-bottom: 1px solid $light;
+  margin-bottom: 1em;
+}
+
+.attribution {
+  width: 600px;
+  margin: 0 auto;
+  font-size: 80%;
+  line-heigth: 100%;
+  text-align: right;
+}
+
+a {
+  color: $light;
+  text-decoration: underline;
+
+  &:hover {
+    color: white;
+  }
+}
